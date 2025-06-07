@@ -1,0 +1,280 @@
+# analysis_output.yaml
+video_info:
+  app_type: "Trello-like task management application with drag-and-drop functionality"
+  duration: "42 minutes 11 seconds"
+  final_outcome: "Fully working app with three columns (To Do, In Progress, Done), drag-and-drop between columns, add/delete tasks, and local storage persistence"
+
+main_edit:
+  target_length: "35-45 minutes"
+  keep_segments:
+    - start: "00:00:00"
+      end: "00:01:18"
+      reason: "Essential setup, milestone overview, and ticking clock - establishes challenge expectations"
+      priority: "high"
+
+    - start: "00:01:10"
+      end: "00:05:45"
+      reason: "Project scaffolding setup, React creation, and Hello World success - includes AI assumptions discovery"
+      priority: "medium"
+
+    - start: "00:05:40"
+      end: "00:08:49"
+      reason: "Layout planning, three-column structure setup, and bootstrap decision - core foundation work"
+      priority: "high"
+
+    - start: "00:11:35"
+      end: "00:25:40"
+      reason: "Major debugging session - authentic AI struggle, human systematic problem-solving, real learning moments"
+      priority: "high"
+
+    - start: "00:24:54"
+      end: "00:28:38"
+      reason: "Adding new task functionality success, testing, milestone completion, and celebration"
+      priority: "high"
+
+    - start: "00:28:30"
+      end: "00:31:50"
+      reason: "Delete functionality implementation and failed local storage attempt - shows iterative development"
+      priority: "medium"
+
+    - start: "00:31:50"
+      end: "00:36:00"
+      reason: "Drag-and-drop anticipation, implementation, and amazed testing - most impressive AI moment"
+      priority: "high"
+
+    - start: "00:36:40"
+      end: "00:40:45"
+      reason: "Simple local storage success approach, learning from complexity failure, and reflection"
+      priority: "high"
+
+    - start: "00:40:45"
+      end: "00:42:11"
+      reason: "Final celebration, process reflection, lessons learned, and future series vision"
+      priority: "high"
+
+  speed_up_segments:
+    - start: "00:08:49"
+      end: "00:11:35"
+      speed: "2x"
+      reason: "Bootstrap installation, file modifications, and component setup - technical but repetitive"
+
+    - start: "00:18:28"
+      end: "00:21:30"
+      speed: "1.5x"
+      reason: "Systematic manual debugging by commenting code - methodical but can be condensed"
+
+    - start: "00:29:30"
+      end: "00:31:00"
+      speed: "2x"
+      reason: "Failed local storage cleanup and server restart issues - less valuable content"
+
+  cut_segments:
+    - start: "00:06:07"
+      end: "00:06:40"
+      reason: "Unnecessary file deletion without educational value"
+
+    - start: "00:31:00"
+      end: "00:31:50"
+      reason: "Server restart delays and technical waiting time before drag-and-drop"
+
+highlight_edit:
+  target_length: "15-20 minutes"
+  segments:
+    - name: "Challenge Setup & Quick Start"
+      start: "00:00:00"
+      end: "00:02:30"
+      description: "Project overview, milestones, React setup, and Hello World success with AI assumptions discovery"
+
+    - name: "When AI Gets Stuck"
+      start: "00:12:38"
+      end: "00:18:30"
+      description: "Real debugging session showing AI limitations and human systematic problem-solving methodology"
+
+    - name: "Feature Development Win"
+      start: "00:24:54"
+      end: "00:28:38"
+      description: "Adding new tasks functionality working smoothly, testing, and milestone celebration"
+
+    - name: "Drag-and-Drop Magic Moment"
+      start: "00:31:50"
+      end: "00:36:00"
+      description: "Anticipation, complex drag-and-drop implemented perfectly on first try, genuine amazement"
+
+    - name: "Simple Beats Complex"
+      start: "00:36:40"
+      end: "00:40:45"
+      description: "Local storage success with simple approach after learning from earlier complex failure"
+
+shorts:
+  - title: "AI Built Drag-and-Drop in 3 Minutes (I'm Shocked)"
+    hook: "The moment of truth is drag and drop..."
+    segments:
+      - start: "00:31:50"
+        end: "00:32:30"
+        description: "Anticipation setup and initial request for drag-and-drop functionality"
+      - start: "00:34:30"
+        end: "00:35:40"
+        description: "Testing the drag-and-drop with genuine amazed reactions and commentary"
+    text_overlays:
+      - text: "The moment of truth: drag & drop"
+        timing: "00:00:03-00:00:08"
+      - text: "Expected this to be the hardest part"
+        timing: "00:00:15-00:00:22"
+      - text: "IT JUST WORKED PERFECTLY 🤯"
+        timing: "00:00:45-00:00:55"
+    estimated_engagement: "high"
+
+  # - title: "When GitHub Copilot Gets REALLY Confused"
+  #   hook: "This simple React component broke everything for 25 minutes..."
+  #   segments:
+  #     - start: "00:12:30"
+  #       end: "00:13:30"
+  #       description: "App breaking after adding task component, error discovery"
+  #     - start: "00:15:51"
+  #       end: "00:17:30"
+  #       description: "Human debugging approach and systematic problem-solving"
+  #   text_overlays:
+  #     - text: "Added a simple component"
+  #       timing: "00:00:05-00:00:10"
+  #     - text: "Element type is invalid... 💥"
+  #       timing: "00:00:15-00:00:25"
+  #     - text: "25 minutes of debugging later..."
+  #       timing: "00:00:35-00:00:45"
+  #     - text: "Human beats AI at debugging"
+  #       timing: "00:00:50-00:00:58"
+  #   estimated_engagement: "high"
+
+  # - title: "AI vs Human: Who Debugs Better?"
+  #   hook: "AI kept digging deeper into the wrong solution, so I stepped in..."
+  #   segments:
+  #     - start: "00:15:45"
+  #       end: "00:17:30"
+  #       description: "Human debugging approach introduction and systematic code commenting"
+  #     - start: "00:23:22"
+  #       end: "00:25:00"
+  #       description: "Finding the solution AI missed through methodical approach and success"
+  #   text_overlays:
+  #     - text: "AI: trying complex fixes"
+  #       timing: "00:00:05-00:00:12"
+  #     - text: "Human: comment out code until error disappears"
+  #       timing: "00:00:20-00:00:30"
+  #     - text: "Found the issue in 5 minutes"
+  #       timing: "00:00:45-00:00:52"
+  #     - text: "Sometimes simple wins"
+  #       timing: "00:00:53-00:01:00"
+  #   estimated_engagement: "high"
+
+  # - title: "Building Trello Clone in 1 Hour with AI"
+  #   hook: "Can AI build a full task manager with drag-and-drop in 60 minutes? Let's find out..."
+  #   segments:
+  #     - start: "00:00:00"
+  #       end: "00:00:30"
+  #       description: "Challenge setup, milestone overview, and ticking clock pressure"
+  #     - start: "00:40:00"
+  #       end: "00:41:30"
+  #       description: "Final working app demonstration with all features functioning"
+  #   text_overlays:
+  #     - text: "Challenge: Build Trello clone in 1 hour ⏰"
+  #       timing: "00:00:05-00:00:15"
+  #     - text: "✅ Three columns"
+  #       timing: "00:00:30-00:00:35"
+  #     - text: "✅ Drag & drop"
+  #       timing: "00:00:38-00:00:43"
+  #     - text: "✅ Local storage"
+  #       timing: "00:00:46-00:00:51"
+  #     - text: "Mission accomplished! 🎉"
+  #       timing: "00:00:54-00:01:00"
+  #   estimated_engagement: "high"
+
+  # - title: "Why Simple Prompts Beat Complex Ones"
+  #   hook: "My complex prompt failed miserably, but this simple request worked perfectly..."
+  #   segments:
+  #     - start: "00:36:40"
+  #       end: "00:37:30"
+  #       description: "Setup for simple local storage approach after complex failure, explicit simplicity request"
+  #     - start: "00:39:05"
+  #       end: "00:39:50"
+  #       description: "Comparing results - simple approach success with minimal code additions"
+  #   text_overlays:
+  #     - text: "First attempt: overcomplicated disaster 💥"
+  #       timing: "00:00:08-00:00:18"
+  #     - text: "'Let's try the simplest way possible'"
+  #       timing: "00:00:25-00:00:35"
+  #     - text: "Result: 2 lines of code, perfect functionality ✨"
+  #       timing: "00:00:42-00:00:55"
+  #   estimated_engagement: "high"
+
+  # - title: "AI Made Wild Assumptions from My Folder Name"
+  #   hook: "I only asked for Hello World, but GitHub Copilot had other plans..."
+  #   segments:
+  #     - start: "00:03:25"
+  #       end: "00:04:10"
+  #       description: "Discovery of AI making extensive feature assumptions from 'task-manager' folder name"
+  #     - start: "00:03:39"
+  #       end: "00:04:00"
+  #       description: "Creator's genuine surprise at AI's assumptions and intelligence"
+  #   text_overlays:
+  #     - text: "Me: 'Just create Hello World'"
+  #       timing: "00:00:05-00:00:12"
+  #     - text: "AI: sees folder name 'task-manager' 👀"
+  #       timing: "00:00:18-00:00:28"
+  #     - text: "AI: assumes entire feature roadmap"
+  #       timing: "00:00:32-00:00:42"
+  #     - text: "Sometimes AI is scary smart 🤯"
+  #       timing: "00:00:48-00:00:58"
+  #   estimated_engagement: "medium"
+
+seo_suggestions:
+  main_video_titles:
+    - "Building a Trello Clone in 1 Hour Using ONLY AI (GitHub Copilot)"
+    - "Can GitHub Copilot Build Drag-and-Drop Without Human Help?"
+    - "What Happens When AI Gets Stuck? (Real React Development)"
+    - "I Challenged AI to Build a Task Manager - Here's What Happened"
+    - "60-Minute AI Coding Challenge: Trello Clone with Drag & Drop"
+
+  highlight_titles:
+    - "AI Built This Trello Clone in 20 Minutes (Best Moments)"
+    - "GitHub Copilot's Biggest Wins and Epic Fails"
+    - "Drag-and-Drop Magic: AI Coding Highlights"
+
+  thumbnail_moments:
+    - timestamp: "00:34:39"
+      description: "Amazed expression while testing successful drag-and-drop functionality - genuine surprise"
+    - timestamp: "00:12:51"
+      description: "Error message on screen with frustrated expression during debugging phase"
+    - timestamp: "00:39:43"
+      description: "Split screen showing before/after of working app with persistent data demonstration"
+    - timestamp: "00:25:46"
+      description: "Clean shot of working task form with successful add functionality demo"
+    - timestamp: "00:31:52"
+      description: "Anticipation moment - 'The moment of truth is drag and drop' setup shot"
+    - timestamp: "00:41:07"
+      description: "Final celebration moment with fully working application and satisfied expression"
+
+key_learnings:
+  technical_insights:
+    - "React component naming conflicts can cause 'Element type is invalid' errors with bootstrap"
+    - "Simple, explicit prompts consistently yield better results than complex, detailed requests"
+    - "Local storage integration requires useEffect hooks for proper state synchronization"
+    - "React DnD library can be implemented successfully by AI with minimal human intervention"
+    - "Bootstrap React components can create unexpected naming conflicts with custom components"
+    - "Systematic debugging (commenting out code) is more effective than AI's trial-and-error approach"
+    - "AI context window limitations require periodic summarization for long development sessions"
+
+  ai_capabilities_shown:
+    - "Exceptional at implementing complex libraries (React DnD) perfectly on first attempt"
+    - "Can make intelligent feature assumptions from minimal context clues (folder names)"
+    - "Struggles significantly with debugging its own syntax and import errors"
+    - "Responds very well to explicit simplicity instructions after complex approach failures"
+    - "Can recover from failed approaches when given clear, simple guidance and direction"
+    - "Tends to overcomplicate solutions unless specifically instructed to keep things simple"
+    - "Excellent at following established patterns but poor at error resolution"
+
+  human_intervention_points:
+    - "Manual debugging using systematic code commenting to isolate and identify errors"
+    - "Recognizing when AI is overcomplicating solutions and needs clear redirection"
+    - "Providing explicit guidance to use simpler approaches after witnessing complex failures"
+    - "File cleanup and project organization tasks that AI tends to overlook"
+    - "Time management decisions and milestone prioritization under deadline pressure"
+    - "Knowing when to abandon AI's approach entirely and solve problems manually"
+    - "Prompt engineering improvements based on observing what works vs what doesn't"
