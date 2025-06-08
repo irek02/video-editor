@@ -1,6 +1,6 @@
 # Prompt for analyzing the timestamped transcript
 
-**Analyze this timestamped transcript using the AI-Assisted Video Content Creation Guide. Output your analysis in YAML format in the output folder following this exact structure:**
+**Analyze this timestamped transcript using the AI-Assisted Video Content Creation Guide. Output your analysis in YAML format in the input folder following this exact structure:**
 
 ```
 # analysis_output.yaml
@@ -71,7 +71,14 @@ key_learnings:
   human_intervention_points: []
 ```
 
-**Fill in all sections with specific timestamps from the transcript. For each timestamp, use the format HH:MM:SS (e.g., '00:15:30').
+**CRITICAL TIMESTAMP FORMAT REQUIREMENT:**
+
+- ALL timestamps MUST use the exact format HH:MM:SS with leading zeros
+- For videos under 1 hour, always use 00:MM:SS format (e.g., '00:15:30', NOT '15:30:00')
+- Examples: '00:05:07', '00:31:59', '00:42:11'
+- NEVER use MM:SS:SS format as it will cause video processing errors
+
+**Fill in all sections with specific timestamps from the transcript following the HH:MM:SS format above.
 Here's my timestamped transcript.
 
-Be specific with timestamps and provide clear reasoning for each editing decision.
+Be specific with timestamps and provide clear reasoning for each editing decision.**
