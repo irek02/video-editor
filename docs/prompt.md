@@ -1,4 +1,18 @@
-# Prompt for analyzing the timestamped transcript
+# AI Analysis Prompt for Video Editing
+
+## Instructions
+
+For each video project, all assets (original, trimmed, transcript, YAML, outputs) are stored in a dedicated subfolder under the `assets/` directory (which is git-ignored). For example: `assets/home-booking-new/`.
+
+- By the time you use this prompt, the exported mp4 (`original.mp4`) and the transcript (`transcript.txt`) are already present in the subfolder.
+- Your task is to analyze the transcript and generate the analysis YAML file (`analysis.yaml`) in the same subfolder.
+- The output videos should also be saved in the same subfolder.
+
+This structure keeps all files for a single project together and prevents workspace clutter.
+
+---
+
+## Example YAML Analysis File
 
 **Analyze this timestamped transcript using the AI-Assisted Video Content Creation Guide. Output your analysis in YAML format in the input folder following this exact structure:**
 

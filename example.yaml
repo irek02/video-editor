@@ -1,4 +1,4 @@
-# analysis_output.yaml
+# analysis.yaml
 video_info:
   app_type: "Trello-like task management application with drag-and-drop functionality"
   duration: "42 minutes 11 seconds"

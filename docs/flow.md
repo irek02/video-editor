@@ -2,15 +2,17 @@
 
 The flow:
 
-1. record the video in ScreenFlow
-2. export the video to mp4
-3. trim silence via the below command and
+1. I record the video in ScreenFlow and export it as `assets/[project_name]/original.mp4`
+2. AI trims silence via the below command and output to `trimmed.mp4` in the same subfolder:
 
     ```sh
-    cd ~/Documents/youtube_series
-    docker run --rm -v $(pwd):/workspace my-auto-editor home-booking-new.mp4 --margin 0.2s
+    docker run --rm -v $(pwd)/assets/[project_name]:/workspace my-auto-editor original.mp4 --margin 0.2s -o trimmed.mp4
     ```
 
-4. extract timestamped transcript from the trimmed video using Whisper Transcription and place it in the input folder as txt file
-5. use docs/promt.md to have the AI to generate the analisys yaml file and put it in the input folder
-6. have the AI execute the video_editor.py script process the trimmed video and output processed video in the ouput folder
+3. Extract timestamped transcript from `trimmed.mp4` using Whisper Transcription app on Mac and save as `transcript.txt` in the same subfolder
+4. Use `docs/prompt.md` to have the AI generate the analysis YAML file and put it in the same subfolder as `analysis.yaml`
+5. Have the AI execute the `video_editor.py` script to process `trimmed.mp4` using `analysis.yaml` and output the final videos in the same subfolder
+
+---
+
+All assets for a single video project are kept together in a dedicated subfolder under `assets/`, which is git-ignored. This keeps your workspace organized and prevents clutter as you work on more videos.
