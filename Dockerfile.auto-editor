@@ -1,0 +1,16 @@
+FROM python:3.9-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install compatible numpy first, then auto-editor
+RUN pip install numpy==1.24.4
+RUN pip install auto-editor
+
+# Set working directory
+WORKDIR /workspace
+
+# Default command
+ENTRYPOINT ["auto-editor"]

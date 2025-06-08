@@ -3,7 +3,7 @@
 **Analyze this timestamped transcript using the AI-Assisted Video Content Creation Guide. Output your analysis in YAML format in the input folder following this exact structure:**
 
 ```
-# analysis_output.yaml
+# analysis_output_[video_name].yaml
 video_info:
   app_type: ""
   duration: ""
