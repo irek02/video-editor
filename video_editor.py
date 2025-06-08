@@ -13,14 +13,18 @@ import tempfile
 import shutil
 
 class VideoEditor:
-    def __init__(self, input_video, yaml_file, output_dir="output"):
+    def __init__(self, input_video, yaml_file, output_dir=None):
         self.input_video = input_video
         self.yaml_file = yaml_file
-        self.output_dir = output_dir
+        # If output_dir is not specified, use the input video's folder
+        if output_dir is None:
+            self.output_dir = os.path.dirname(os.path.abspath(input_video))
+        else:
+            self.output_dir = output_dir
         self.temp_dir = tempfile.mkdtemp()
 
         # Create output directory
-        os.makedirs(output_dir, exist_ok=True)
+        os.makedirs(self.output_dir, exist_ok=True)
 
         # Load YAML analysis
         with open(yaml_file, 'r') as f:
@@ -232,13 +236,13 @@ class VideoEditor:
         }
 
         # Create main edit
-        # results['main_edit'] = self.create_main_edit()
+        results['main_edit'] = self.create_main_edit()
 
         # Create highlight edit
         results['highlight_edit'] = self.create_highlight_edit()
 
         # Create shorts
-        # results['shorts'] = self.create_shorts()
+        results['shorts'] = self.create_shorts()
 
         print(f"\n=== Processing Complete ===")
         print(f"Main edit: {'✓' if results['main_edit'] else '✗'}")
