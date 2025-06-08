@@ -9,9 +9,9 @@ The flow:
     docker run --rm -v $(pwd)/assets/[project_name]:/workspace my-auto-editor original.mp4 --margin 0.2s -o trimmed.mp4
     ```
 
-3. Extract timestamped transcript from `trimmed.mp4` using Whisper Transcription app on Mac and save as `transcript.txt` in the same subfolder
-4. Use `docs/prompt.md` to have the AI generate the analysis YAML file and put it in the same subfolder as `analysis.yaml`
-5. Have the AI execute the `video_editor.py` script to process `trimmed.mp4` using `analysis.yaml` and output the final videos in the same subfolder
+3. I extract timestamped transcript from `trimmed.mp4` using Whisper Transcription app on Mac and save as `transcript.txt` in the same subfolder
+4. AI uses `docs/prompt.md` to generate the analysis YAML file and put it in the same subfolder as `analysis.yaml`
+5. AI executes the `video_editor.py` script to process `trimmed.mp4` using `analysis.yaml` and output the final videos in the same subfolder
 
 ---
 

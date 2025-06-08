@@ -1,3 +1,4 @@
+# To execute this script, run `python3 transcribe.py`
 from faster_whisper import WhisperModel
 
 model = WhisperModel("small", device="auto")  # Uses MPS (Apple Silicon GPU) if available
