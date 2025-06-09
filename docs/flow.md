@@ -13,6 +13,10 @@ The flow:
 4. AI uses `docs/prompt.md` to generate the analysis YAML file and put it in the same subfolder as `analysis.yaml`
 5. AI executes the `video_editor.py` script to process `trimmed.mp4` using `analysis.yaml` and output the final videos in the same subfolder
 
+    ```sh
+    python3 video_editor.py assets/[project_name]/trimmed.mp4 assets/[project_name]/analysis.yaml
+    ```
+
 ---
 
 All assets for a single video project are kept together in a dedicated subfolder under `assets/`, which is git-ignored. This keeps your workspace organized and prevents clutter as you work on more videos.
