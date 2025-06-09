@@ -62,8 +62,8 @@ class VideoEditor:
             print(f"Error: {e.stderr}")
             return False
 
-    def extract_segment(self, start, end, output_file, speed=None):
-        """Extract a video segment, optionally with speed adjustment"""
+    def extract_segment(self, start, end, output_file):
+        """Extract a video segment"""
         command = [
             'ffmpeg', '-y',  # -y to overwrite files
             '-i', self.input_video,
@@ -71,17 +71,9 @@ class VideoEditor:
             '-to', end,
             '-c:v', 'libx264',  # Re-encode for reliability
             '-c:a', 'aac',
-            '-avoid_negative_ts', 'make_zero'
+            '-avoid_negative_ts', 'make_zero',
+            output_file
         ]
-
-        # Add speed filter if specified
-        if speed and speed != "1x":
-            speed_value = float(speed.replace('x', ''))
-            video_filter = f"setpts={1/speed_value}*PTS"
-            audio_filter = f"atempo={speed_value}"
-            command.extend(['-filter:v', video_filter, '-filter:a', audio_filter])
-
-        command.append(output_file)
 
         return self.run_ffmpeg(command, f"Extracting {start}-{end}")
 
@@ -95,19 +87,13 @@ class VideoEditor:
         # Extract all keep segments
         for i, segment in enumerate(self.analysis['main_edit']['keep_segments']):
             if segment['priority'] in ['high', 'medium']:  # Include high and medium priority
-                segment_file = os.path.join(self.temp_dir, f"main_segment_{i:03d}.mp4")
-
+                segment_file = os.path.join(self.temp_dir, f"segment_{i:03d}.mp4")
+                
+                print(f"Processing: {segment['title']} ({segment['start']}-{segment['end']})")
+                
                 if self.extract_segment(segment['start'], segment['end'], segment_file):
                     segment_files.append(segment_file)
                     segments.append(f"file '{segment_file}'")
-
-        # Extract speed-up segments
-        for i, segment in enumerate(self.analysis['main_edit']['speed_up_segments']):
-            segment_file = os.path.join(self.temp_dir, f"speed_segment_{i:03d}.mp4")
-
-            if self.extract_segment(segment['start'], segment['end'], segment_file, segment['speed']):
-                segment_files.append(segment_file)
-                segments.append(f"file '{segment_file}'")
 
         # Create concat file
         concat_file = os.path.join(self.temp_dir, 'main_edit_concat.txt')

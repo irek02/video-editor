@@ -26,18 +26,11 @@ video_info:
 main_edit:
   target_length: "35-45 minutes"
   keep_segments:
-    - start: "00:00:00"
-      end: "00:00:00"
-      reason: ""
-      title: "" # will be shown during segment transition in the video
+    - start: "00:08:00"
+      end: "00:09:00"
+      title: "Authentication Debugging"
+      reason: "Extended troubleshooting session with environment variable setup."
       priority: "high/medium/low"
-
-  speed_up_segments:
-    - start: "00:00:00"
-      end: "00:00:00"
-      speed: "2x"
-      title: ""
-      reason: ""
 
   cut_segments:
     - start: "00:00:00"
