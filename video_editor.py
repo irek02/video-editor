@@ -88,9 +88,9 @@ class VideoEditor:
         for i, segment in enumerate(self.analysis['main_edit']['keep_segments']):
             if segment['priority'] in ['high', 'medium']:  # Include high and medium priority
                 segment_file = os.path.join(self.temp_dir, f"segment_{i:03d}.mp4")
-                
+
                 print(f"Processing: {segment['title']} ({segment['start']}-{segment['end']})")
-                
+
                 if self.extract_segment(segment['start'], segment['end'], segment_file):
                     segment_files.append(segment_file)
                     segments.append(f"file '{segment_file}'")
